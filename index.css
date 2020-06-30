@@ -40,6 +40,11 @@ nav ul {
 	display: flex;
 }
 
+.toggle {
+	display: none;
+}
+
+
 nav ul li a {
 	margin: 30px;
 	font-family: myriad pro regular;
@@ -107,6 +112,16 @@ nav ul li a {
 	color: #373636;
 }
 
+.hire-btn  a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.hire-btn  a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
 .down-cv {
 	background-color: #0b0b0b;
 	color: #FFFFFF;
@@ -133,6 +148,7 @@ button:active {
 	border-radius: 20px;
 	box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
 	display: flex;
+	padding: 10px;
 	margin: -7% auto 20px auto;
 	position: relative;
 	justify-content: space-evenly;
@@ -176,6 +192,15 @@ button:active {
 	border: none;
 	font-family: calibri;
 	background-color: #262525;
+}
+
+.about-text   a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.about-text  a:hover {
+    text-decoration: underline;
+    color: blue;
 }
 
 .services {
@@ -318,6 +343,7 @@ button:active {
 
 .footer p {
 	font-family: calibri;
+	 margin: 10px;
 }
 .footer p:nth-child(1){
 	
@@ -438,5 +464,106 @@ button:active {
 		font-size: 14px;
 		height: 35px;
 		width: 160px;
+	}
+}
+
+@media (max-width: 750px) {
+	section {
+		background-image: none;
+		background-color: #f7f7f7;
+	}
+	.model {
+		display: none;
+	}
+	.text-container p:nth-child(2) {
+		line-height: 40px;
+		margin: 0px;
+		padding: 0px;
+	}
+	.text-container {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 80%;
+	}
+	nav ul {
+		margin: 0px;
+		padding: 0px;
+		background-color: #ebeef4;
+		flex-direction: column;
+		position: fixed;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 60vh;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 1;
+		display: none;
+	}
+
+	nav ul li {
+		padding: 10px;
+	}
+	nav ul li a {
+		font-family: calibri;
+		font-size: 1.4em;
+		text-transform: uppercase;
+		color: #5c5c5c;
+	}
+	nav ul li a:hover {
+		color: #121212;
+	}
+	.toggle:before{
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 30px;
+		z-index: 1;
+	}
+	.toggle.active:before{
+		content: '\f00d';
+		position: fixed;
+		right: 25px;
+		line-height: 0px;
+	}
+	nav.active ul {
+		display: flex !important;
+	}
+	.about-container {
+		top: 0px;
+		flex-direction: column;
+		width: 90%;
+		height: auto;
+		padding: 30px 0px;
+		align-items: center;
+	}
+	.about-text {
+		width: 90%;
+		text-align: center;
+	}
+	.service-text {
+		width: 100%;
+	}
+	.contact-me {
+		height: 180px;
+	}
+	.contact-me p {
+		font-size: 18px;
+	}
+	.contact-me button {
+		width: 150px;
+		height: 33px;
+	}
+	footer p:nth-child(2) {
+		width: 90% !important;
+	}
+	footer p:nth-child(3) {
+		margin-top: 20px;
+	}
+
+	.toggle {
+	display: block;
 	}
 }
