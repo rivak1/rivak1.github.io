@@ -296,6 +296,20 @@ button:active {
 	font-size: 14px;
 	font-weight: bold;
 }
+.contact a {
+	width: 200px;
+    height: 40px;
+    background-color: #FFFFFF;
+    /* outline: none; */
+    padding-top: 13px;
+    padding-left: 60px;
+    align-items: center;
+    color: #000000;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 .footer {
 	height: 300px;
