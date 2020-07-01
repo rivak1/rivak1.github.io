@@ -463,12 +463,12 @@ button:active {
 }
 .copyright {
 	color: #565555;
-	font-size: 14px;
-	position: absolute;
-	left: 50%;
-	bottom: 10px;
-	transform: translateX(-50%);
-
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 84%;
+    text-align: center;
 }
 
 .social-icons i {
@@ -618,7 +618,7 @@ button:active {
 		width: 90% !important;
 	}
 	footer p:nth-child(3) {
-		margin-top: 20px;
+		margin-top: 40px;
 	}
 
 	.toggle {
