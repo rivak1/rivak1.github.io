@@ -487,6 +487,20 @@ button:active {
 	transition: all ease0.5s;
 } 
 
+#share-buttons{
+	display: flex;
+    flex-wrap: wrap;
+    flex-grow: 0;
+    justify-content: center;
+}
+
+#share-buttons a {
+	margin:3px;
+}
+#share-buttons a img{
+ 	height: 40px;
+}
+
 @media (max-width: 1000px) {
 
 	*{
