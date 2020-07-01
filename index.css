@@ -5,6 +5,9 @@ body {
 	margin:0px;
 	padding: 0px;
 }
+* {
+    box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -37,14 +40,36 @@ nav {
 }
 
 nav ul {
-	display: flex;
-}
-
-.toggle {
 	display: none;
 }
 
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	background-color: #ebeef4;
+	flex-direction: column;
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 60vh;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	display: none;
+}
 
+nav ul li {
+	padding: 10px;
+}
+nav ul li a {
+	font-family: calibri;
+	font-size: 1.4em;
+	text-transform: uppercase;
+	color: #5c5c5c;
+}
 nav ul li a {
 	margin: 30px;
 	font-family: myriad pro regular;
@@ -52,6 +77,29 @@ nav ul li a {
 	font-size: 15px;
 	font-weight: 700;
 }
+nav ul li a:hover {
+	color: #121212;
+}
+nav.active ul {
+	display: flex !important;
+}
+.toggle {
+	display: block;
+}
+
+.toggle:before{
+		content: '\f0c9';
+		font-family: fontAwesome;
+		line-height: 30px;
+		z-index: 1;
+}
+.toggle.active:before{
+	content: '\f00d';
+	position: fixed;
+	right: 45px;
+	line-height: 0px;
+}
+
 
 .logo {
 	font-family: RoadTest;
@@ -220,7 +268,7 @@ button:active {
 }
 
 .service-text p:nth-child(1) {
-	font-family: 'Holtwood One SC', serif;
+	font-family: 'monospace', serif;
 	font-weight: bold;
 	color: #323d3d;
 	font-size:30px;
@@ -299,8 +347,39 @@ button:active {
 	font-family:calibri;
 	text-align: center;
 	margin: 0px 0px 20px 0px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.box-1 p:nth-child(4),
+.box-2 p:nth-child(4),
+.box-3 p:nth-child(4) {
+	font-family:calibri;
+	text-align: center;
+	margin: 0px 0px 20px 0px;
 	color: #8f8f8f;
 }
+.c-epx {
+	width: 100%;
+	margin-top: 25px;
+	height: 280px;
+	background-image: url("images/project in your mind.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.c-epx p {
+	color: #FFFFFF;
+	font-size: 20px;
+	font-family: calibri;
+	font-weight: bold;
+	border-bottom:2px solid #FFFFFF;
+}
+
+
 .contact {
 	width: 100%;
 	margin-top: 25px;
@@ -475,6 +554,13 @@ button:active {
 		height: 35px;
 		width: 160px;
 	}
+	.c-epx{
+		height: 200px;
+	}
+
+	.c-epx p {
+		font-size: 26px;
+	}
 }
 
 @media (max-width: 750px) {
@@ -495,51 +581,6 @@ button:active {
 		left: 50%;
 		transform: translate(-50%,-50%);
 		width: 80%;
-	}
-	nav ul {
-		margin: 0px;
-		padding: 0px;
-		background-color: #ebeef4;
-		flex-direction: column;
-		position: fixed;
-		left: 0;
-		top:0;
-		width: 100%;
-		height: 60vh;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1;
-		display: none;
-	}
-
-	nav ul li {
-		padding: 10px;
-	}
-	nav ul li a {
-		font-family: calibri;
-		font-size: 1.4em;
-		text-transform: uppercase;
-		color: #5c5c5c;
-	}
-	nav ul li a:hover {
-		color: #121212;
-	}
-	.toggle:before{
-		content: '\f0c9';
-		font-family: fontAwesome;
-		line-height: 30px;
-		z-index: 1;
-	}
-	.toggle.active:before{
-		content: '\f00d';
-		position: fixed;
-		right: 25px;
-		line-height: 0px;
-	}
-	nav.active ul {
-		display: flex !important;
 	}
 	.about-container {
 		top: 0px;
@@ -565,6 +606,13 @@ button:active {
 	.contact-me button {
 		width: 150px;
 		height: 33px;
+	}
+	.c-epx{
+		height: 150px;
+	}
+
+	.c-epx p {
+		font-size: 18px;
 	}
 	footer p:nth-child(2) {
 		width: 90% !important;
