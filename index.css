@@ -463,6 +463,7 @@ button:active {
 }
 .copyright {
 	color: #565555;
+	margin-top: 10px;
     font-size: 14px;
     position: absolute;
     left: 50%;
