@@ -102,7 +102,7 @@
 	<!-- CONTACT SECTION START -->
 	<div class="contact" id="contact">
 		<p>If You Have Any Project In Your Mind Or Want to Hire Me.</p>
-		<button><a href = "mailto:shahrivak6@gmail.com">Contact Me</a></button>
+		<button><a href="tel:+917425856605">Contact Me</a></button>
 	</div>
 	<!-- CONTACT SECTION END -->
 
@@ -115,6 +115,7 @@
 			<a href="https://twitter.com/rivakshah1"><i class="fab fa-twitter"></i></a>
 			<a href="https://github.com/rivak1"><i class="fab fa-github"></i></a>
 			<a href="https://in.linkedin.com/in/rivak-shah-91286a156"><i class="fab fa-linkedin-in"></i></a>
+			<a id="whatsapp"><i class="fab fa-whatsapp"></i></a>
 		</div>
 		<p class="copyright">@copyright 2020 Rivak Shah. All rights reserved.</p>
 	</footer>
@@ -124,6 +125,27 @@
 			$('.toggle').click(function(){
 				$('.toggle').toggleClass('active')
 				$('nav').toggleClass('active')
+			})
+
+			$('#whatsapp').click(function() {
+				var  name = null;
+				while(!name && name !== "x") {
+					name = prompt("Tell Me Your Name or press x for Exit");
+				}
+				if(name !== 'x' && name) {
+					var  message = null;
+					while(!message || name === "x") {
+						message = prompt("Enter Your Message or press x for Exit");
+					}
+				}
+				if(message && message !== 'x') {
+					var sendMessage = confirm("confirm yes to send");
+					if(sendMessage) {
+						var finalMessage = "Person Name = "+name+", \n Message = "+message;
+						$('#whatsapp').attr("href","https://api.whatsapp.com/send?phone=917425856605&text="+finalMessage+"&source=&data=&app_absent=")
+					}
+				}
+
 			})
 		})
 	</script>
