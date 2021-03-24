@@ -1,14 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Preloader from './Resume/Common/preloader';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Rivak Shah</h1>
-      <p>Welcome Here........</p>
-      <h1>Hi all</h1>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      preload:true,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      preload:false,
+    })
+  }
+
+  render(){
+    return (
+      <Preloader />
+    );
+  }
+
 }
+
 
 export default App;
